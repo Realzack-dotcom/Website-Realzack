@@ -800,7 +800,36 @@ if (welcomeScreen) {
         );
 
 }
+// Mulai musik setelah loading selesai
 
+if (music) {
+
+    music.currentTime = 0;
+
+    music.volume = 0.6;
+
+    music.play()
+        .then(
+            function () {
+
+                console.log(
+                    "Musik berhasil diputar"
+                );
+
+            }
+        )
+        .catch(
+            function (error) {
+
+                console.log(
+                    "Musik diblokir browser:",
+                    error
+                );
+
+            }
+        );
+
+}
 
 // ========================================
 // ENTER PORTFOLIO + MUSIC
